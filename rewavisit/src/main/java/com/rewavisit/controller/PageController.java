@@ -40,6 +40,6 @@ public class PageController {
 			mv.addObject("greeting",greeting);
 			return mv;
 	}
-	
+		
 	}
 
