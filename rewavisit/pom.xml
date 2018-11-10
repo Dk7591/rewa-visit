@@ -7,7 +7,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>rewavisit Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  
   <dependencies>
+<!--   link with shoppingbackend -->
+  <dependency>
+  <groupId>com</groupId>
+  <artifactId>shoppingbackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
   
 <dependency>
     <groupId>javax</groupId>
