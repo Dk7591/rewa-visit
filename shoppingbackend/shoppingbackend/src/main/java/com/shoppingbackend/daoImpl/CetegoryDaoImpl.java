@@ -9,7 +9,7 @@ import com.shoppingbackend.dao.CetegoryDao;
 import com.shoppingbackend.dto.Cetegory;
 
 
-@Repository("cetegoryDao")
+@Repository("cetegorydao")
 public class CetegoryDaoImpl implements CetegoryDao {
 	
 	
@@ -23,8 +23,8 @@ public class CetegoryDaoImpl implements CetegoryDao {
 		 Cetegory cetegory=new Cetegory();
 		 //Add Cetegory
 		 cetegory.setId(1);
-		 cetegory.setName("Television");
-		 cetegory.setDiscription("This is the television description ");
+		 cetegory.setName("Rani Tal");
+		 cetegory.setDiscription("Rani Tal(Rani Talab) famous for Maa Kali and Talab ");
 		 cetegory.setImageUrl("Cat1.png");
 		 cetegories.add(cetegory);
 		 
@@ -32,8 +32,8 @@ public class CetegoryDaoImpl implements CetegoryDao {
 		 cetegory=new Cetegory();
 		 //Add Cetegory
 		 cetegory.setId(2);
-		 cetegory.setName("Radio");
-		 cetegory.setDiscription("This is the Redio description ");
+		 cetegory.setName("Chirahula temple");
+		 cetegory.setDiscription("Chirahula Temple famous for God (Hanuman) ");
 		 cetegory.setImageUrl("Cat2.png");
 		 cetegories.add(cetegory);
 
@@ -41,8 +41,8 @@ public class CetegoryDaoImpl implements CetegoryDao {
 		 cetegory=new Cetegory();
 		 //add Cetegory
 		 cetegory.setId(3);
-		 cetegory.setName("Computer");
-		 cetegory.setDiscription("This is the Computer description ");
+		 cetegory.setName("Kila");
+		 cetegory.setDiscription("This place  famaous for Maha mritunjay shiv g ");
 		 cetegory.setImageUrl("Cat3.png");
 		 cetegories.add(cetegory);
 		 
@@ -57,6 +57,18 @@ public class CetegoryDaoImpl implements CetegoryDao {
 		
 		
 		return cetegories;
+	}
+
+	public Cetegory get(int id) {
+		//Enhance for loop
+		for(Cetegory cetegory:cetegories)
+		{
+			 if(cetegory.getId()==id)
+			 {
+				 return cetegory; 
+			 }
+		}
+		return null;
 	}
 
 }

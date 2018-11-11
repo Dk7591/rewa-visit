@@ -6,5 +6,6 @@ import com.shoppingbackend.dto.Cetegory;
 
 public interface CetegoryDao {
 	List<Cetegory> list();
+	Cetegory get(int id);
 
 }
