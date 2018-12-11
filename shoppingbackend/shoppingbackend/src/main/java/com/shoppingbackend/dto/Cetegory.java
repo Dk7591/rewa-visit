@@ -1,13 +1,25 @@
 package com.shoppingbackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Cetegory {
 	/*
 	 *Private field 
 	 * */
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String discription;
+	@Column(name="image_url")
 	private String imageUrl;
+	@Column(name="is_active")
 	private boolean active=true;
 	public int getId() {
 		return id;
@@ -38,6 +50,11 @@ public class Cetegory {
 	}
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+	@Override
+	public String toString() {
+		return "Cetegory [id=" + id + ", name=" + name + ", discription=" + discription + ", imageUrl=" + imageUrl
+				+ ", active=" + active + "]";
 	}
 	
 	

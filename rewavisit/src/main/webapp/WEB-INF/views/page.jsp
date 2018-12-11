@@ -17,10 +17,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rewa Visit-${title}</title>
+    <title>Shopping-${title}</title>
+    
+    <script>
+    window.menu='${title}';
+    window.contextRoot = '${contextRoot}'    
+    </script>
 
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap ReadableCSS -->
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+    
+     <!-- Bootstrap core CSS -->
+    <link href="${css}/dataTable.bootstrap.css" rel="stylesheet">
+    
+    
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -56,14 +68,40 @@
 <c:if test="${userClickAllGallary==true or userClickCetegoryGallary==true}">
 <%@include file="gallary.jsp" %>
 </c:if>
+
+<!-- Load single  for show product -->
+<c:if test="${userClickShowProduct==true}">
+<%@include file="Single.jsp" %>
+</c:if>
+
+
 </div>
        <!-- Footer -->
     <%@include file="./shared/footer.jsp" %>
     </footer>
+    
+    
+    <!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/jquery.validate.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/bootbox.min.js"></script>
+		
+    
+    <!-- Self coded javascript -->
+		<script src="${js}/myapp.js"></script>
+    
 </div>
   </body>
 
